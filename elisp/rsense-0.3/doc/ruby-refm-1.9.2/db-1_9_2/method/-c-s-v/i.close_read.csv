@@ -1,0 +1,7 @@
+kind=defined
+names=close_read
+visibility=public
+
+--- close_read
+delegate
+

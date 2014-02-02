@@ -1,0 +1,7 @@
+kind=defined
+names=string
+visibility=public
+
+--- string
+delegate
+

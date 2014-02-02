@@ -1,0 +1,7 @@
+kind=defined
+names=close_write
+visibility=public
+
+--- close_write
+delegate
+

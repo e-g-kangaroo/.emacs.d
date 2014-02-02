@@ -1,0 +1,20 @@
+kind=defined
+names=method_missing
+visibility=public
+
+--- method_missing(id, *args) -> object | nil
+[[m:WIN32OLE#invoke]]メソッドを実行します。
+
+当メソッドは直接呼び出さないでください。
+
+@param id メソッド名をシンボルで指定します。
+@param args メソッドの引数を指定します。
+@return メソッドの返り値。ただし返り値を持たないメソッドの場合はnil。
+@raise RuntimeError idが有効なシンボルではありません。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            理由はメッセージのHRESULTを調べてください。
+
+WIN32OLEはOLEオートメーションオブジェクトのメソッド呼び出しをmethod_missingを利用して実行します。このためWIN32OLEを継承するクラスを作成してmethod_missingをオーバーライドする場合、superを呼び出してください。
+
+@see [[m:WIN32OLE#invoke]]
+

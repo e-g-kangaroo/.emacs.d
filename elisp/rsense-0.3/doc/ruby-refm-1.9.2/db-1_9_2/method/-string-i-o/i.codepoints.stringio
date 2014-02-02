@@ -1,0 +1,11 @@
+kind=defined
+names=codepoints,each_codepoint
+visibility=public
+
+--- codepoints{|codepoint| ... } -> self
+--- codepoints -> Enumerator
+--- each_codepoint{|codepoint| ... } -> self
+--- each_codepoint -> Enumerator
+
+@see [[m:IO#each_codepoint]]
+

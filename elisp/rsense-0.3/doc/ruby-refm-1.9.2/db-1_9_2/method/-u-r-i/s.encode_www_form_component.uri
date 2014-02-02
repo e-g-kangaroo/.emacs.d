@@ -1,0 +1,14 @@
+kind=defined
+names=encode_www_form_component
+visibility=public
+
+--- encode_www_form_component(str) -> String
+
+文字列を URL-encoded form data にエンコードした文字列を返します。
+
+This doesn't convert *, -, ., 0-9, A-Z, _, a-z,
+does convert SP to +, and convert others to %XX.
+
+This refers http://www.w3.org/TR/html5/forms.html#url-encoded-form-data
+
+@see [[m:URI.decode_www_form_component]], [[m:URI.encode_www_form]]

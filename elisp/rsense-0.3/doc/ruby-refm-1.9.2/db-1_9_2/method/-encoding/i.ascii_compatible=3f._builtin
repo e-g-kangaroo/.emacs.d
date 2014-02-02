@@ -1,0 +1,11 @@
+kind=defined
+names=ascii_compatible?
+visibility=public
+
+--- ascii_compatible? -> bool
+Returns whether ASCII-compatible or not.
+
+Îã:
+  Encoding::UTF_8.ascii_compatible?     #=> true
+  Encoding::UTF_16BE.ascii_compatible?  #=> false
+

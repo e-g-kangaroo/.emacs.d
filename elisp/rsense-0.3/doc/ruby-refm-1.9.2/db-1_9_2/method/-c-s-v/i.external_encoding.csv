@@ -1,0 +1,7 @@
+kind=defined
+names=external_encoding
+visibility=public
+
+--- external_encoding
+delegate
+

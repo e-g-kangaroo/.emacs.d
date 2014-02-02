@@ -1,0 +1,7 @@
+kind=defined
+names=ioctl
+visibility=public
+
+--- ioctl
+delegate
+

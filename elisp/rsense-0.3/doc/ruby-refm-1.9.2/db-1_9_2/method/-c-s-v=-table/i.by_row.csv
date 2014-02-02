@@ -1,0 +1,14 @@
+kind=defined
+names=by_row
+visibility=public
+
+--- by_row -> CSV::Table
+
+Returns a duplicate table object, in row mode.  This is handy for chaining
+in a single call without changing the table mode, but be aware that this
+method can consume a fair amount of memory for bigger data sets.
+
+This method returns the duplicate table for chaining.  Don't chain
+destructive methods (like []=()) this way though, since you are working
+with a duplicate.
+

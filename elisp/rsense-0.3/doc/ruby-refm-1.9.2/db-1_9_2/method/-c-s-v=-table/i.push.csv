@@ -1,0 +1,11 @@
+kind=defined
+names=push
+visibility=public
+
+--- push(*rows) -> self
+A shortcut for appending multiple rows.  Equivalent to:
+
+  rows.each { |row| self << row }
+
+This method returns the table for chaining.
+

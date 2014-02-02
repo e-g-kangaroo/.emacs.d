@@ -1,0 +1,12 @@
+kind=defined
+names=recover
+visibility=public
+
+--- recover(argv) -> Array
+
+argv の先頭に self.args を戻します。
+
+argv を返します。
+
+@return argv を返します。
+

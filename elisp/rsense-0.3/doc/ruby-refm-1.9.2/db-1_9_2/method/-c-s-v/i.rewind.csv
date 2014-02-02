@@ -1,0 +1,7 @@
+kind=defined
+names=rewind
+visibility=public
+
+--- rewind -> 0
+Rewinds the underlying IO object and resets CSV's lineno() counter.
+

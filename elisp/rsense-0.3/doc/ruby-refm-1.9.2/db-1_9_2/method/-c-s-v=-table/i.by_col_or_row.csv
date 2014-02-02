@@ -1,0 +1,15 @@
+kind=defined
+names=by_col_or_row
+visibility=public
+
+--- by_col_or_row -> CSV::Table
+
+ミックスモードになっている新しい [[c:CSV::Table]] オブジェクトを返します。
+
+元のテーブルモードを変更せずにメソッドチェーンできるので便利です。
+しかし、大きなデータセットに対しても同じだけメモリを消費するので気をつけてください。
+
+This method returns the duplicate table for chaining.  Don't chain
+destructive methods (like []=()) this way though, since you are working
+with a duplicate.
+

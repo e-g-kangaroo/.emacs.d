@@ -1,0 +1,17 @@
+kind=defined
+names=header_convert
+visibility=public
+
+--- header_convert(name)
+--- header_convert{|field| ... }
+--- header_convert{|field, field_info| ... }
+
+Identical to CSV#convert(), but for header rows.
+
+Note that this method must be called before header rows are read to have any
+effect.
+
+@param name 変換器の名前を指定します。
+
+@see [[m:CSV#convert]]
+

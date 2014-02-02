@@ -1,0 +1,23 @@
+kind=defined
+names=each
+visibility=public
+
+--- each {|i|...} -> ()
+
+オブジェクトの列挙インターフェイスを呼び出してアイテム単位にブロックを実行します。
+
+OLEオートメーションサーバの中には、コレクション用インターフェイスを持つものがあります。
+eachメソッドは、このようなオブジェクトの列挙メソッドを呼び出して、アイテム毎のイテレーションを行います。
+
+@param i コレクション内のアイテム
+@raise eWIN32OLERuntimeError selfが列挙インターフェイスをサポートしていない場合に通知します。
+
+   excel = WIN32OLE.new('Excel.Application')
+   book = excel.workbooks.add
+   sheets = book.worksheets(1)
+   cells = sheets.cells("A1:A5")
+   cells.each do |cell|
+     cell.value = 10
+   end
+   excel.Quit
+

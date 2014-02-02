@@ -1,0 +1,76 @@
+kind=defined
+names=open
+visibility=public
+
+--- open(filename, mode = "rb", options = Hash.new){|csv| ... } -> nil
+--- open(filename, mode = "rb", options = Hash.new) -> CSV
+--- open(filename, options = Hash.new){|csv| ... } -> nil
+--- open(filename, options = Hash.new) -> CSV
+
+このメソッドは [[c:IO]] オブジェクトをオープンして [[c:CSV]] でラップします。
+これは CSV ファイルを書くための主要なインターフェイスとして使うことを意図しています。
+
+You must pass a +filename+ and may optionally add a +mode+ for Ruby's
+open().  You may also pass an optional Hash containing any +options+
+CSV::new() understands as the final argument.
+
+このメソッドは [[m:IO.open]] と同じように動きます。ブロックが与えられた場合は
+ブロックに [[c:CSV]] オブジェクトを渡し、ブロック終了時にそれをクローズします。
+ブロックが与えられなかった場合は [[c:CSV]] オブジェクトを返します。
+この挙動は Ruby1.8 の CSV ライブラリとは違います。Ruby1.8 では行をブロックに渡します。
+Ruby1.9 では [[m:CSV.foreach]] を使うとブロックに行を渡します。
+
+データが [[m:Encoding.default_external]] と異なる場合は、mode にエンコーディング
+を指定する文字列を埋め込まなければなりません。
+
+You must provide a +mode+ with an embedded Encoding designator unless your
+data is in Encoding::default_external().  CSV will check the Encoding of the
+underlying IO object (set by the +mode+ you pass) to deterime how to parse
+the data.   You may provide a second Encoding to have the data transcoded as
+it is read just as you can with a normal call to IO::open().  For example,
+<tt>"rb:UTF-32BE:UTF-8"</tt> would read UTF-32BE data from the file but
+transcode it to UTF-8 before CSV parses it.
+
+An opened CSV object will delegate to many IO methods for convenience.  You
+may call:
+
+* binmode()
+* binmode?()
+* close()
+* close_read()
+* close_write()
+* closed?()
+* eof()
+* eof?()
+* external_encoding()
+* fcntl()
+* fileno()
+* flock()
+* flush()
+* fsync()
+* internal_encoding()
+* ioctl()
+* isatty()
+* path()
+* pid()
+* pos()
+* pos=()
+* reopen()
+* seek()
+* stat()
+* sync()
+* sync=()
+* tell()
+* to_i()
+* to_io()
+* truncate()
+* tty?()
+
+@param filename ファイル名を指定します。
+
+@param mode [[m:IO.open]] に指定できるものと同じものを指定できます。
+
+@param options [[m:CSV.new]] のオプションと同じオプションを指定できます。
+
+@see [[m:CSV.new]], [[m:IO.open]]
+

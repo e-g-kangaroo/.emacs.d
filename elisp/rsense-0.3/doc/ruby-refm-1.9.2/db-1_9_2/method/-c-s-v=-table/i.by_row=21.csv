@@ -1,0 +1,11 @@
+kind=defined
+names=by_row!
+visibility=public
+
+--- by_row! -> self
+
+Switches the mode of this table to row mode.  All calls to indexing and
+iteration methods will work with rows until the mode is changed again.
+
+This method returns the table and is safe to chain.
+

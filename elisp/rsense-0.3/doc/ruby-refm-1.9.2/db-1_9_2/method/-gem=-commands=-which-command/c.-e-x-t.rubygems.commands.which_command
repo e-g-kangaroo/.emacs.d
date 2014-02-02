@@ -1,0 +1,8 @@
+kind=defined
+names=EXT
+visibility=public 
+
+--- EXT -> [String]
+
+拡張子を表す配列です。
+

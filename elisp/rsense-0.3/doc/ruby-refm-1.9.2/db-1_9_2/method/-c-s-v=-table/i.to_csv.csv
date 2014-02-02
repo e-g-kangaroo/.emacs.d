@@ -1,0 +1,12 @@
+kind=defined
+names=to_csv,to_s
+visibility=public
+
+--- to_csv -> String
+--- to_s -> String
+Returns the table as a complete CSV String.  Headers will be listed first,
+then all of the field rows.
+
+This method assumes you want the Table.headers(), unless you explicitly
+pass <tt>:write_headers => false</tt>.
+

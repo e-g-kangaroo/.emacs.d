@@ -1,0 +1,12 @@
+kind=defined
+names=header_converters
+visibility=public
+
+--- header_converters -> Array
+
+Returns the current list of converters in effect for headers.  See CSV::new
+for details.  Built-in converters will be returned by name, while others
+will be returned as is.
+
+@see [[m:CSV.new]]
+

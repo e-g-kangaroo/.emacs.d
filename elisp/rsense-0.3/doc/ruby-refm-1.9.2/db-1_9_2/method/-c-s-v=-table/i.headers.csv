@@ -1,0 +1,9 @@
+kind=defined
+names=headers
+visibility=public
+
+--- headers -> Array
+
+Returns the headers for the first row of this table (assumed to match all
+other rows).  An empty Array is returned for empty tables.
+

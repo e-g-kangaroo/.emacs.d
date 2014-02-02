@@ -1,0 +1,8 @@
+kind=defined
+names=LOCALE_SYSTEM_DEFAULT
+visibility=public
+
+--- LOCALE_SYSTEM_DEFAULT  -> Fixnum
+
+システム既定のロケールを示すLCID(0x0800)です。WIN32OLEがオートメーションを利用する場合の既定値です。
+

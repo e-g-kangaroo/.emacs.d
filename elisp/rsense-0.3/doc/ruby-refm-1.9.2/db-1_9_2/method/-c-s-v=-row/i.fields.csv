@@ -1,0 +1,17 @@
+kind=defined
+names=fields,values_at
+visibility=public
+
+--- fields(*headers_and_or_indices) -> Array
+--- values_at(*headers_and_or_indices) -> Array
+
+This method accepts any number of arguments which can be headers, indices,
+Ranges of either, or two-element Arrays containing a header and offset.
+Each argument will be replaced with a field lookup as described in
+CSV::Row.field().
+
+If called with no arguments, all fields are returned.
+
+
+@param headers_and_or_indices
+

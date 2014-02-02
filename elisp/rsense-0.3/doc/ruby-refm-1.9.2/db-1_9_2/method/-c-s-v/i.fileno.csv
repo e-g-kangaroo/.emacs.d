@@ -1,0 +1,7 @@
+kind=defined
+names=fileno
+visibility=public
+
+--- fileno
+delegate
+

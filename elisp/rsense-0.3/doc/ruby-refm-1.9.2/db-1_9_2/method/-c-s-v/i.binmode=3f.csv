@@ -1,0 +1,7 @@
+kind=defined
+names=binmode?
+visibility=public
+
+--- binmode?
+delegate
+

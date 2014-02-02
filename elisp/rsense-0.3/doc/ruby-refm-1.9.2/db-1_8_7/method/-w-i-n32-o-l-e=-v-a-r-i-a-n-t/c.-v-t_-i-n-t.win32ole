@@ -1,0 +1,7 @@
+kind=defined
+names=VT_INT
+visibility=public
+
+--- VT_INT -> Integer
+符号付き32ビット整数（int）を示します。
+

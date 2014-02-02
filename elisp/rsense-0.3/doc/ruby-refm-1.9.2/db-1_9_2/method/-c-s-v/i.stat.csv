@@ -1,0 +1,7 @@
+kind=defined
+names=stat
+visibility=public
+
+--- stat
+delegate
+

@@ -1,0 +1,7 @@
+kind=defined
+names=truncate
+visibility=public
+
+--- truncate
+delegate
+

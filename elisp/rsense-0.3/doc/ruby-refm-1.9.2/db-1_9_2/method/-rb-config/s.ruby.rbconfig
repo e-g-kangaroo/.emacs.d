@@ -1,0 +1,8 @@
+kind=defined
+names=ruby
+visibility=public
+
+--- ruby
+
+returns the absolute pathname of the ruby command.
+

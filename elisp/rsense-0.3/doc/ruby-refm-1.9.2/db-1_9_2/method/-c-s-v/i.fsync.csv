@@ -1,0 +1,7 @@
+kind=defined
+names=fsync
+visibility=public
+
+--- fsync
+delegate
+

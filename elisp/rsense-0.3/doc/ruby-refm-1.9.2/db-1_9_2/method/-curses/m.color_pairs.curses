@@ -1,0 +1,10 @@
+kind=defined
+names=color_pairs
+visibility=public
+
+--- color_pairs -> Integer
+
+サポートしていない環境では、例外 NotImplementedError が発生します。
+
+@raise NotImplementedError
+

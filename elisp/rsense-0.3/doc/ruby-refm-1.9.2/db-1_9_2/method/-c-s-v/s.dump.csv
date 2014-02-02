@@ -1,0 +1,48 @@
+kind=defined
+names=dump
+visibility=public
+
+--- dump(ary_of_objs, io = "", options = Hash.new) -> String | nil
+
+このメソッドは Ruby オブジェクトの配列を文字列や CSV ファイルにシリアライズすることができます。
+[[c:Marshal]] や [[lib:yaml]] よりは不便ですが、スプレッドシートやデータベース
+とのやりとりには役に立つでしょう。
+
+Out of the box, this method is intended to work with simple data objects or
+Structs.  It will serialize a list of instance variables and/or
+Struct.members().
+
+If you need need more complicated serialization, you can control the process
+by adding methods to the class to be serialized.
+
+A class method csv_meta() is responsible for returning the first row of the
+document (as an Array).  This row is considered to be a Hash of the form
+key_1,value_1,key_2,value_2,...  CSV::load() expects to find a class key
+with a value of the stringified class name and CSV::dump() will create this,
+if you do not define this method.  This method is only called on the first
+object of the Array.
+
+The next method you can provide is an instance method called csv_headers().
+This method is expected to return the second line of the document (again as
+an Array), which is to be used to give each column a header.  By default,
+CSV::load() will set an instance variable if the field header starts with an
+@ character or call send() passing the header as the method name and
+the field value as an argument.  This method is only called on the first
+object of the Array.
+
+Finally, you can provide an instance method called csv_dump(), which will
+be passed the headers.  This should return an Array of fields that can be
+serialized for this object.  This method is called once for every object in
+the Array.
+
+The +io+ parameter can be used to serialize to a File, and +options+ can be
+anything CSV::new() accepts.
+
+@param ary_of_objs 任意の配列を指定します。
+
+@param io データの出力先を指定します。デフォルトは文字列です。
+
+@param options オプションを指定します。
+
+@see [[m:CSV.new]]
+

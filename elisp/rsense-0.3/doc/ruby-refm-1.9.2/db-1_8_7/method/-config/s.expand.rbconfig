@@ -1,0 +1,8 @@
+kind=defined
+names=expand
+visibility=public
+
+--- expand(val)
+
+@see [[m:Config::MAKEFILE_CONFIG]]
+

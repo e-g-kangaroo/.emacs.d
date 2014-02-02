@@ -1,0 +1,12 @@
+kind=defined
+names=each
+visibility=public
+
+--- each{|header, field| ... } -> self
+
+In the default mixed mode or row mode, iteration is the standard row major
+walking of rows.  In column mode, interation will +yield+ two element
+tuples containing the column name and an Array of values for that column.
+
+This method returns the table for chaining.
+

@@ -1,0 +1,24 @@
+kind=defined
+names=encode_www_form
+visibility=public
+
+--- encode_www_form(enum) -> String
+
+enum から URL-encoded form data を生成します。
+
+This generates application/x-www-form-urlencoded data defined in HTML5
+from given an Enumerable object.
+
+This internally uses URI.encode_www_form_component(str).
+
+This doesn't convert encodings of give items, so convert them before call
+this method if you want to send data as other than original encoding or
+mixed encoding data. (strings which is encoded in HTML5 ASCII incompatible
+encoding is converted to UTF-8)
+
+This doesn't treat files. When you send a file, use multipart/form-data.
+
+This refers http://www.w3.org/TR/html5/forms.html#url-encoded-form-data
+
+@see [[m:URI.encode_www_form_component]], [[m:URI.decode_www_form]]
+

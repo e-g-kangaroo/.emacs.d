@@ -1,0 +1,10 @@
+kind=defined
+names=__setobj__
+visibility=public
+
+--- __setobj__(obj)
+
+与えられたオブジェクトを自身の参照先としてセットします。
+
+@param obj 任意のオブジェクトを指定します。
+

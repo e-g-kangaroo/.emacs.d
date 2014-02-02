@@ -1,0 +1,22 @@
+kind=defined
+names=new
+visibility=public
+
+--- new(server, host=nil) -> WIN32OLE
+OLEオートメーションサーバを生成します。
+
+引数で指定したCLSIDまたはPROGIDを持つOLEオートメーションサーバを生成します。生成に成功した場合、該当サーバを操作可能なWIN32OLEオブジェクトが返ります。
+
+CLSIDおよびPROGIDについては[[m:WIN32OLE.connect]]を参照してください。
+
+@param server OLEオートメーションサーバを示すPROGIDまたはCLSIDを文字列で指定します。
+@param host サーバを生成するホストのホスト名またはIPアドレスを文字列で指定します。
+            省略時は現在スクリプトを実行中のホストで生成します。
+@return hostで指定したホスト上のserver引数で指定したWIN32OLEオブジェクトを返します。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            理由はメッセージのHRESULTを調べてください。
+
+    WIN32OLE.new('Excel.Application') # => Excel OLE Automation WIN32OLE object.
+
+    WIN32OLE.new('{00024500-0000-0000-C000-000000000046}') # => Excel OLE Automation WIN32OLE object.
+

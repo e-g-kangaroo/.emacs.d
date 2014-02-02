@@ -1,0 +1,9 @@
+kind=defined
+names=add,add_tests
+visibility=public
+
+--- add_tests(*args) -> self
+--- add(*args) -> self
+
+[[m:Test::Unit::TestSuite#<<]] と同じです。
+

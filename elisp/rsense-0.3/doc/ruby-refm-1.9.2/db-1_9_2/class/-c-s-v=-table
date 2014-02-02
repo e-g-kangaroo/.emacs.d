@@ -1,0 +1,18 @@
+superclass=Object
+type=class
+library=csv
+extended=Forwardable
+included=Enumerable
+
+[[c:CSV::Table]] は CSV ドキュメントを表す二次元のデータ構造です。
+行単位や列単位の操作を行うことが出来ます。また必要であれば CSV に
+戻すこともできます。
+
+ヘッダ行の処理が有効である場合、[[c:CSV]] から返されるテーブルは全てこのクラスから
+構築されます。
+
+以下のメソッドを [[c:Array]] に委譲します。
+
+* empty?()
+* length()
+* size()

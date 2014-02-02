@@ -1,0 +1,33 @@
+superclass=Object
+type=class
+library=win32ole
+extended=
+included=
+
+OLEオートメーションサーバをRubyで操作するためのクラスです。
+
+Windowsの多くのアプリケーションやライブラリは、COMと呼ばれるAPI群を利用して他のプログラムから操作できます。WIN32OLEがサポートしているのは、COMのAPIのうち、特にインタープリタ用のインターフェイスであるOLEオートメーション（IDispatchインターフェイス）とそれに付随するリフレクション用のインターフェイスです。
+
+これらのインターフェイスをサポートしている代表的なWindowsアプリケーションに、Office、IE、iTunes、Illustratorがあります。また、WMI、WshShellなどのライブラリを利用してWindowsの情報を操作することも可能です。これらのプログラムをOLEオートメーションサーバと呼びます。
+
+WIN32OLEオブジェクトは、OLEオートメーションサーバが提供するメソッドやプロパティ（Rubyの属性に対応）をスクリプトから呼び出す手段を提供します。呼び出しには、Rubyのオブジェクトと同様にオブジェクトに続けて「.」とメソッド名、必要であれば引数のリストを記述します。
+
+=== サンプルコード
+
+  require 'win32ole'
+
+  excel = WIN32OLE.new('Excel.Application')
+  workbook = excel.Workbooks.Open('workbook.xls')
+  workbook.PrintOut
+  workbook.Close(:SaveChanges => false)
+  excel.Quit
+
+なお、OLEオートメーションの仕様ではメソッド名は大文字と小文字を区別しません。そのため、以下のように記述しても構いません。
+
+  require 'win32ole'
+
+  excel = WIN32OLE.new('Excel.Application')
+  workbook = excel.workbooks.open('workbook.xls')
+  workbook.printout
+  workbook.close(:SaveChanges => false)
+  excel.quit

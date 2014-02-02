@@ -1,0 +1,7 @@
+kind=defined
+names=sync
+visibility=public
+
+--- sync
+delegate
+

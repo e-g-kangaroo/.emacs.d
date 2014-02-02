@@ -1,0 +1,11 @@
+kind=defined
+names=VT_ERROR
+visibility=public
+
+--- VT_ERROR -> Integer
+HRESULTを示します。
+
+HRESULTは、COMを含むWindowsのサービスがアプリケーションへ通知する統一的なエラーコードです。
+
+HRESULT: [[url:http://msdn.microsoft.com/en-us/library/cc704587(v=PROT.10).aspx]]
+

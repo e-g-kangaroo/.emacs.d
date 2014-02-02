@@ -1,0 +1,7 @@
+kind=defined
+names=pid
+visibility=public
+
+--- pid
+delegate
+

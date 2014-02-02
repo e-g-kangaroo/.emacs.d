@@ -1,0 +1,37 @@
+*~
+*.elc
+el-get/el-get/
+
+auto-complete/
+auto-save-list/
+backup/
+elmo/
+emacs-w3m/
+eshell/
+howm/
+junk/
+migemo/
+recentf/
+server/
+temp/
+url/
+wanderlust/
+undohist/
+
+inits/00_*.el
+inits/99_*.el
+/bookmarks
+ac-comphist.dat
+abbrev_defs
+
+# Ignore .DS_Store
+.DS_Store
+
+# Ignore swap file
+*.swp
+
+# Ignore .dropbox
+.dropbox
+
+# Ignore "Icon\r"
+Icon^M^M      

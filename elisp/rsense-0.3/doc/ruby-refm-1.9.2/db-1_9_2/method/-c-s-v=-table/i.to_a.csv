@@ -1,0 +1,9 @@
+kind=defined
+names=to_a
+visibility=public
+
+--- to_a -> Array
+
+Returns the table as an Array of Arrays.  Headers will be the first row,
+then all of the field rows will follow.
+

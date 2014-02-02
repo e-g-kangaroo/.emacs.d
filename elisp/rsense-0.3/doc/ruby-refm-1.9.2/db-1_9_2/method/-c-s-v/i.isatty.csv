@@ -1,0 +1,7 @@
+kind=defined
+names=isatty
+visibility=public
+
+--- isatty
+delegate
+

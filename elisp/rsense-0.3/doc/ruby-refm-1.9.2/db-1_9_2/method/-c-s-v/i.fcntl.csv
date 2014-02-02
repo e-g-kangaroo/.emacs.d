@@ -1,0 +1,7 @@
+kind=defined
+names=fcntl
+visibility=public
+
+--- fcntl
+delegate
+

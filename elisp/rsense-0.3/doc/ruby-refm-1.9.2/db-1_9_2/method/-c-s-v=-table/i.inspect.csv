@@ -1,0 +1,9 @@
+kind=defined
+names=inspect
+visibility=public
+
+--- inspect -> String
+
+Shows the mode and size of this table in a US-ASCII String.
+
+

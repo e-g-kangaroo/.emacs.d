@@ -1,0 +1,21 @@
+kind=defined
+names=invoke
+visibility=public
+
+--- invoke(name, *args) -> object | nil
+メソッド名を指定してオブジェクトのメソッドを呼び出します。
+
+OLEオートメーションサーバのメソッドを動的に呼び出したい場合に利用します。
+
+なお、OLEオートメーションの仕様により、メソッド名の大文字、小文字は区別されません。
+
+@param name メソッド名を文字列で指定します。
+@param args メソッドの引数を指定します。
+@return メソッドの返り値。ただし返り値を持たないメソッドの場合はnil。
+@raise WIN32OLERuntimeError オートメーションサーバの呼び出しに失敗しました。
+                            理由はメッセージのHRESULTを調べてください。
+
+
+  excel = WIN32OLE.new('Excel.Application')
+  excel.invoke('Quit')  # => excel.Quitに等しい
+

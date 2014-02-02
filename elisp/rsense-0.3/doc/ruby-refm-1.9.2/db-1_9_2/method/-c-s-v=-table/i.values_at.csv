@@ -1,0 +1,14 @@
+kind=defined
+names=values_at
+visibility=public
+
+--- values_at(indices_or_headers) -> Array
+The mixed mode default is to treat a list of indices as row access,
+returning the rows indicated.  Anything else is considered columnar
+access.  For columnar access, the return set has an Array for each row
+with the values indicated by the headers in each Array.  You can force
+column or row mode using by_col!() or by_row!().
+
+You cannot mix column and row access.
+
+

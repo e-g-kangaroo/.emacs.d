@@ -1,0 +1,13 @@
+kind=defined
+names=delete_if
+visibility=public
+
+--- delete_if{ ... } -> self
+
+Removes any column or row for which the block returns +true+.  In the
+default mixed mode or row mode, iteration is the standard row major
+walking of rows.  In column mode, interation will +yield+ two element
+tuples containing the column name and an Array of values for that column.
+
+This method returns the table for chaining.
+

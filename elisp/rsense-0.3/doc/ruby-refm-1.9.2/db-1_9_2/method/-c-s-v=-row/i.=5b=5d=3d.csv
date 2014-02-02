@@ -1,0 +1,32 @@
+kind=defined
+names=[]=
+visibility=public
+
+--- []=(header_or_index, value)
+--- []=(header, offset, value)
+
+ヘッダの名前かインデックスでフィールドを探し、値をセットします。
+
+Assigning past the end of the row with an index will set all pairs between
+to <tt>[nil, nil]</tt>.  Assigning to an unused header appends the new
+pair.
+
+@param header_or_index ヘッダの名前かインデックスを指定します。
+
+@param value 値を指定します。
+
+@see [[m:CSV::Row#field]]
+
+--- []=(header, offset, value)
+
+ヘッダの名前でフィールドを探し、値をセットします。
+
+@param header ヘッダの名前を指定します。
+
+@param offset このインデックスより後で、ヘッダの名前を探します。
+              重複しているヘッダがある場合に便利です。
+
+@param value 値を指定します。
+
+@see [[m:CSV::Row#field]]
+

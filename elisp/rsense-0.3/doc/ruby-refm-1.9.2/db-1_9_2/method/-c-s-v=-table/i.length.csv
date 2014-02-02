@@ -1,0 +1,8 @@
+kind=defined
+names=length,size
+visibility=public
+
+--- length -> Fixnum
+--- size -> Fixnum
+delegate
+

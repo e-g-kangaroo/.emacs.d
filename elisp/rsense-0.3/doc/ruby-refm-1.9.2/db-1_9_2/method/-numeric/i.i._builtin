@@ -1,0 +1,10 @@
+kind=defined
+names=i
+visibility=public
+
+--- i    -> Complex
+Complex(0, num) を返す。
+
+Returns the corresponding imaginary number.
+Not available for complex numbers.
+
